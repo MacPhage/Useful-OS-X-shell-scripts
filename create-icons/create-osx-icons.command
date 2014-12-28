@@ -1,6 +1,6 @@
 #!/bin/sh
-iconfile=“source.png"
-iconsetname=“output.iconset"
+iconfile="source.png"
+iconsetname="output.iconset"
 here="`dirname \"$0\"`"
 echo "cd-ing to $here"
 cd "$here" || exit 1
@@ -16,7 +16,7 @@ sips -z 256 256   $iconfile --out $iconsetname/icon_128x128@2x.png
 sips -z 256 256   $iconfile --out $iconsetname/icon_256x256.png
 sips -z 512 512   $iconfile --out $iconsetname/icon_256x256@2x.png
 sips -z 512 512   $iconfile --out $iconsetname/icon_512x512.png
-cp $iconfile $iconsetname/icon_512x512@2x.png
+sips -z 1024 1024   $iconfile --out $iconsetname/icon_512x512@2x.png
 echo "Done."
 
 echo "Creating ICNS from iconset..."
